@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #3f3f46 transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #3f3f46;
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-vault-600 hover:bg-vault-500 text-white font-medium px-4 py-2 rounded-lg transition-all duration-200 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-secondary {
+    @apply bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-medium px-4 py-2 rounded-lg transition-all duration-200 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none border border-zinc-700;
+  }
+  .btn-danger {
+    @apply bg-red-900/50 hover:bg-red-800/60 text-red-400 font-medium px-4 py-2 rounded-lg transition-all duration-200 active:scale-[0.98] border border-red-900/50;
+  }
+  .btn-ghost {
+    @apply hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 font-medium px-3 py-2 rounded-lg transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-vault-500/50 focus:border-vault-500 transition-colors;
+  }
+  .card {
+    @apply bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-all duration-200 hover:border-zinc-700;
+  }
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-movie { @apply bg-blue-900/50 text-blue-400 border border-blue-800/50; }
+  .badge-tv_show { @apply bg-purple-900/50 text-purple-400 border border-purple-800/50; }
+  .badge-album { @apply bg-emerald-900/50 text-emerald-400 border border-emerald-800/50; }
+  .badge-song { @apply bg-amber-900/50 text-amber-400 border border-amber-800/50; }
+  .badge-artist { @apply bg-pink-900/50 text-pink-400 border border-pink-800/50; }
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
