@@ -401,6 +401,7 @@ CREATE INDEX IF NOT EXISTS idx_media_tags_media_id ON media_tags(media_id);
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS trigger
 LANGUAGE plpgsql
+SECURITY DEFINER
 AS $$
 BEGIN
   INSERT INTO public.profiles (id, display_name)
